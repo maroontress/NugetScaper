@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="canonical" href="https://www.nuget.org/profiles/MaroontressFastSoftware">
+
+    
+    
+
+    <title>
+        NuGet Gallery
+        | MaroontressFastSoftware
+    </title>
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link title="NuGet.org" type="application/opensearchdescription+xml" href="/opensearch.xml" rel="search">
+
+    <link href="/Content/gallery/css/site.min.css?v=7pJhLgv1inxqoEW0m22s0vialauRKJ2ckSaDP2na4oM1" rel="stylesheet"/>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+    
+    
+    
+                <script type="text/javascript">
+                var appInsights = window.appInsights || function (config) {
+                    function s(config) {
+                        t[config] = function () {
+                            var i = arguments;
+                            t.queue.push(function () { t[config].apply(t, i) })
+                        }
+                    }
+
+                    var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u;
+                    for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop());
+                    return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) {
+                        var s = u && u(config, r, f, e, o);
+                        return s !== !0 && t["_" + i](config, r, f, e, o), s
+                    }), t
+                }({
+                    instrumentationKey: 'df3a36b9-dfba-401c-82ab-35690083be3e',
+                    samplingPercentage: 100
+                });
+
+                window.appInsights = appInsights;
+                appInsights.trackPageView();
+            </script>
+
+</head>
+<body>
+    
+
+<div id="cookie-banner"></div>
+
+
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href="#" id="skipToContent" class="showOnFocus" title="Skip To Content">Skip To Content</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/">
+                        <img class="navbar-logo" width="94" height="29" alt="NuGet home"
+                             src="/Content/gallery/img/logo-header.svg"
+                                 onerror="this.src='https://nuget.org/Content/gallery/img/logo-header-94x29.png'; this.onerror = null;"
+ />
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" role="tablist">
+                            <li class="active" role="presentation">
+        <a role="tab" aria-selected="true" href="/packages">
+            <span>Packages</span>
+        </a>
+    </li>
+
+                            <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/packages/manage/upload">
+            <span>Upload</span>
+        </a>
+    </li>
+
+    <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/stats">
+            <span>Statistics</span>
+        </a>
+    </li>
+                                                    <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="https://docs.microsoft.com/nuget/">
+            <span>Documentation</span>
+        </a>
+    </li>
+
+                            <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/downloads">
+            <span>Downloads</span>
+        </a>
+    </li>
+
+                            <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="https://blog.nuget.org/">
+            <span>Blog</span>
+        </a>
+    </li>
+
+                    </ul>
+                        <ul class="nav navbar-nav navbar-right" role="tablist">
+    <li class="" role="presentation">
+        <a role="tab" aria-selected="false" href="/users/account/LogOn?returnUrl=%2Fprofiles%2FMaroontressFastSoftware" title="Sign in to an existing NuGet.org account">
+            <span>Sign in</span>
+        </a>
+    </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="search-bar-header" class="container search-container">
+            <div class="row">
+                <form aria-label="Package search bar" class="col-sm-12" action="/packages" method="get">
+                    <div class="input-group">
+    <input name="q" type="text" class="form-control" id="search" aria-label="Enter packages to search"
+           placeholder="Search for packages..." autocomplete="off"
+           value=""
+            />
+    <span class="input-group-btn">
+        <button class="btn btn-default btn-warning btn-search" type="submit"
+                title="Search for packages" aria-label="Search">
+            <span class="ms-Icon ms-Icon--Search" aria-hidden="true"></span>
+        </button>
+    </span>
+</div>
+                    <div id="autocomplete-results-container" class="text-left" tabindex="0"></div>
+
+<script type="text/html" id="autocomplete-results-row">
+    <!-- ko if: $data -->
+    <!-- ko if: $data.PackageRegistration -->
+    <div class="col-sm-4 autocomplete-row-id autocomplete-row-data">
+        <span data-bind="attr: { id: 'autocomplete-result-id-' + $data.PackageRegistration.Id, title: $data.PackageRegistration.Id }, text: $data.PackageRegistration.Id"></span>
+    </div>
+    <div class="col-sm-4 autocomplete-row-downloadcount text-right autocomplete-row-data">
+        <span data-bind="text: $data.DownloadCount + ' downloads'"></span>
+    </div>
+    <div class="col-sm-4 autocomplete-row-owners text-left autocomplete-row-data">
+        <span data-bind="text: $data.OwnersString + ' '"></span>
+    </div>
+    <!-- /ko -->
+    <!-- ko ifnot: $data.PackageRegistration -->
+    <div class="col-sm-12 autocomplete-row-id autocomplete-row-data">
+        <span data-bind="attr: { id: 'autocomplete-result-id-' + $data, title: $data  }, text: $data"></span>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="autocomplete-results-template">
+    <!-- ko if: $data.data.length > 0 -->
+    <div data-bind="foreach: $data.data" id="autocomplete-results-list">
+        <a data-bind="attr: { id: 'autocomplete-result-row-' + $data, href: '/packages/' + $data, title: $data }" tabindex="-1">
+            <div data-bind="attr:{ id: 'autocomplete-container-' + $data }" class="autocomplete-results-row">
+            </div>
+        </a>
+    </div>
+    <!-- /ko -->
+</script>
+
+                </form>
+            </div>
+        </div>
+</nav>
+
+
+
+
+
+
+    <div id="skippedToContent">
+    
+
+
+
+<section role="main" class="container main-container page-profile">
+    <div class="row">
+        <aside class="col-md-3 col-md-push-9 profile-details">
+            <img src="/profiles/MaroontressFastSoftware/avatar?imageSize=512"
+                                class="owner-image img-responsive"
+                                height="332"
+                                width="332"
+                                title="MaroontressFastSoftware"
+                                alt="MaroontressFastSoftware gravatar" />
+            <div class="statistics">
+                <div class="statistic">
+                    <div class="value">9</div>
+                    <div class="description">Packages</div>
+                </div>
+                <div class="statistic">
+                    <div class="value">39,298</div>
+                    <div class="description">Total downloads of packages</div>
+                </div>
+            </div>
+        </aside>
+        <article class="col-md-9 col-md-pull-3">
+            <div class="profile-title">
+                <h1>
+                    MaroontressFastSoftware&nbsp;
+                                    </h1>
+                <span>
+                </span>
+            </div>
+
+            <hr class="profile-title-divider" />
+
+            <ul class="list-packages">
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/StyleChecker"
+                                      >StyleChecker</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        23,088 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2020-08-18T12:05:40.7800000">8/18/2020</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.27 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22csharp%22" title="Search for csharp">csharp</a>
+                                <a href="/packages?q=Tags%3A%22visual-studio%22" title="Search for visual-studio">visual-studio</a>
+                                <a href="/packages?q=Tags%3A%22roslyn%22" title="Search for roslyn">roslyn</a>
+                                <a href="/packages?q=Tags%3A%22analyzer%22" title="Search for analyzer">analyzer</a>
+                                <a href="/packages?q=Tags%3A%22roslyn-analyzer%22" title="Search for roslyn-analyzer">roslyn-analyzer</a>
+                                <a href="/packages?q=Tags%3A%22roslyn-codefix%22" title="Search for roslyn-codefix">roslyn-codefix</a>
+                                <a href="/packages?q=Tags%3A%22stylechecker%22" title="Search for stylechecker">stylechecker</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                StyleChecker is yet another code style checker and refactoring tool like FxCopAnalyzers, StyleCop Analyzers, SonarLint, Roslynator, and so on.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/StyleChecker.Annotations"
+                                      >StyleChecker.<wbr>Annotations</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        6,456 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2018-11-21T07:42:37.3100000">11/21/2018</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.1 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22StyleChecker%22" title="Search for StyleChecker">StyleChecker</a>
+                                <a href="/packages?q=Tags%3A%22analyzers%22" title="Search for analyzers">analyzers</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                Annotations used with StyleChecker.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/Maroontress.HtmlBuilder"
+                                      >Maroontress.<wbr>HtmlBuilder</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        4,291 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2022-08-02T12:15:05.3630000">8/2/2022</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.1.0 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22HTML%22" title="Search for HTML">HTML</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                HtmlBuilder is a C# class library building HTML documents. It depends on .NET Standard 2.1.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/BomSweeper.GlobalTool"
+                                      >BomSweeper.<wbr>GlobalTool</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        1,815 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2020-06-01T19:13:24.8900000">6/1/2020</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.1 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22csharp%22" title="Search for csharp">csharp</a>
+                                <a href="/packages?q=Tags%3A%22dotnet-core%22" title="Search for dotnet-core">dotnet-core</a>
+                                <a href="/packages?q=Tags%3A%22global-tool%22" title="Search for global-tool">global-tool</a>
+                                <a href="/packages?q=Tags%3A%22bomsweeper%22" title="Search for bomsweeper">bomsweeper</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                BomSweeper is a command line tool that finds the files starting with a UTF-8 Byte Order Mark (BOM) in the directory tree and removes a BOM from those files.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/Maroontress.Oxbind"
+                                      >Maroontress.<wbr>Oxbind</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        1,752 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2019-03-22T12:47:33.5100000">3/22/2019</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.3 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22csharp%22" title="Search for csharp">csharp</a>
+                                <a href="/packages?q=Tags%3A%22XML%22" title="Search for XML">XML</a>
+                                <a href="/packages?q=Tags%3A%22deserializer%22" title="Search for deserializer">deserializer</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                Oxbind is an XML deserializer using APIs of .NET Standard 1.3.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/Maroontress.CuiMallet"
+                                      >Maroontress.<wbr>CuiMallet</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        1,014 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2019-07-17T17:22:07.0300000">7/17/2019</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.0 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22CLI%22" title="Search for CLI">CLI</a>
+                                <a href="/packages?q=Tags%3A%22csharp%22" title="Search for csharp">csharp</a>
+                                <a href="/packages?q=Tags%3A%22csharp8%22" title="Search for csharp8">csharp8</a>
+                                <a href="/packages?q=Tags%3A%22dotnet-standard%22" title="Search for dotnet-standard">dotnet-standard</a>
+                                <a href="/packages?q=Tags%3A%22command-line-parser%22" title="Search for command-line-parser">command-line-parser</a>
+                                <a href="/packages?q=Tags%3A%22command-line-arguments%22" title="Search for command-line-arguments">command-line-arguments</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                CuiMallet is a .NET library for making Command Line Interface.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/Maroontress.Collection"
+                                      >Maroontress.<wbr>Collection</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        421 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2022-07-22T12:54:28.7470000">7/22/2022</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.0 </span>
+                    </span>
+                </li>
+            </ul>
+
+            <div class="package-details">
+                Maroontress.Collection is a C# class library containing some collection classes.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/Maroontress.Euclid"
+                                      >Maroontress.<wbr>Euclid</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        248 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2021-02-28T07:31:38.5600000">2/28/2021</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.0 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22Math%22" title="Search for Math">Math</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                Euclid is a .NET library for calculating position and rotation in three-dimensional Euclidean spaces with single precision. It depends on .NET Standard 2.0.
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<li class="package">
+
+    <div class="row">
+        <div class="col-sm-1 hidden-xs hidden-sm col-package-icon">
+            <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                 src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                     onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+        </div>
+        <div class="col-sm-11">
+            <div class="package-header">
+                <a class="package-title"
+                   href="/packages/PourOver.GlobalTool"
+                                      >PourOver.<wbr>GlobalTool</a>
+
+
+
+                    <span class="package-by">
+                        by:
+                            <a href="/profiles/MaroontressFastSoftware" title="View MaroontressFastSoftware's profile">MaroontressFastSoftware</a>
+                    </span>
+            </div>
+
+            <ul class="package-list">
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                        213 total downloads
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                        last updated <span data-datetime="2021-08-20T13:17:42.7170000">8/20/2021</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="icon-text">
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        Latest version: <span class="text-nowrap">1.0.0 </span>
+                    </span>
+                </li>
+                    <li class="package-tags">
+                        <span class="icon-text">
+                            <i class="ms-Icon ms-Icon--Tag" aria-hidden="true"></i>
+
+                                <a href="/packages?q=Tags%3A%22csharp%22" title="Search for csharp">csharp</a>
+                                <a href="/packages?q=Tags%3A%22dotnet-core%22" title="Search for dotnet-core">dotnet-core</a>
+                                <a href="/packages?q=Tags%3A%22global-tool%22" title="Search for global-tool">global-tool</a>
+                                <a href="/packages?q=Tags%3A%22i18n%22" title="Search for i18n">i18n</a>
+                                <a href="/packages?q=Tags%3A%22pourover%22" title="Search for pourover">pourover</a>
+                                                    </span>
+                    </li>
+            </ul>
+
+            <div class="package-details">
+                PourOver is a command-line tool that diagnoses string resources stored in CSV
+      files expressed in multiple languages by comparing the tokens embedded in each
+      string between the languages.
+            </div>
+        </div>
+    </div>
+</li>
+            </ul>
+
+            
+        </article>
+    </div>
+</section>
+
+
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="footer-heading"><a href="/policies/Contact">Contact</a></span>
+                <p>
+                    Got questions about NuGet or the NuGet Gallery?
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="footer-heading"><a href="https://status.nuget.org/">Status</a></span>
+                <p>
+                    Find out the service status of NuGet.org and its related services.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="footer-heading">
+                    <a aria-label="Frequently Asked Questions" href="https://docs.microsoft.com/nuget/policies/nuget-faq">
+                        <abbr title="Frequently Asked Questions">FAQ</abbr>
+                    </a>
+                </span>
+                <p>
+                    Read the Frequently Asked Questions about NuGet and see if your question made the list.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 row-gap">
+                <img alt="" aria-hidden="true" width="184" height="57"
+                     src="/Content/gallery/img/logo-footer.svg"
+                         onerror="this.src='https://nuget.org/Content/gallery/img/logo-footer-184x57.png'; this.onerror = null;"
+ />
+            </div>
+            <div class="col-md-9 row-gap">
+                <div class="row">
+                        <div class="col-md-12 footer-release-info">
+                            <p>
+                                        &#169; Microsoft 2023 -
+
+                                <a href="/policies/About">About</a> -
+                                <a href="/policies/Terms">Terms of Use</a> -
+                                <a href="https://go.microsoft.com/fwlink/?LinkId=521839" id="footer-privacy-policy-link">Privacy Policy</a>
+                                    - <a href="https://www.microsoft.com/trademarks">Trademarks</a>
+                                <br />
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--
+    This is the NuGet Gallery version 4.4.5-main.
+        Deployed from 64e797c Link: https://www.github.com/NuGet/NuGetGallery/commit/64e797c
+        Built on main Link: https://www.github.com/NuGet/NuGetGallery/tree/main
+        Built on 2023-02-09T00:19:00.0000000+00:00
+    Deployment label: PROD-USNC.ASE-4.4.5-main-7306181
+    You are on AW0MDWK000029.
+-->
+
+</footer>
+
+        <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+    <script src="/Scripts/gallery/site.min.js?v=LBWQ0fVXPZYK98BPfNGvallXakc5ik6d2BeN2gvh3yg1"></script>
+
+    
+    <script src="/Scripts/gallery/page-list-packages.min.js?v=6X0du7K00AQuySfMdJsHIecK1KO2o8V48cMriWaiDSw1"></script>
+
+
+</body>
+</html>
