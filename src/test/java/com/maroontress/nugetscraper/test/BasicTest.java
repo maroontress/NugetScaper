@@ -16,6 +16,39 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public final class BasicTest {
 
     @Test
+    public void containTfmBadgesWithoutNext() throws IOException {
+        var expectedList = List.of(Package.of("StyleChecker", 36816),
+                Package.of("StyleChecker.Annotations", 9786),
+                Package.of("Maroontress.HtmlBuilder", 5993),
+                Package.of("Maroontress.Collection", 3205),
+                Package.of("Maroontress.CuiMallet", 2768),
+                Package.of("BomSweeper.GlobalTool", 2062),
+                Package.of("Maroontress.Oxbind", 1929),
+                Package.of("Maroontress.SqlBind", 1724),
+                Package.of("Maroontress.Euclid", 339),
+                Package.of("PourOver.GlobalTool", 330));
+
+        try (var in = getClass().getResourceAsStream(
+                "Maroontress20240203.html")) {
+            assert in != null;
+            var out = new ByteArrayOutputStream();
+            in.transferTo(out);
+            var content = out.toString(StandardCharsets.UTF_8);
+            var profile = NugetScraper.toProfile(content);
+            var all = profile.packageList();
+            var n = all.size();
+            assertThat(n, is(equalTo(expectedList.size())));
+            for (var k = 0; k < n; ++k) {
+                var i = all.get(k);
+                var j = expectedList.get(k);
+                assertThat(i.title(), is(equalTo(j.title())));
+                assertThat(i.totalDownloads(), is(equalTo(j.totalDownloads())));
+            }
+            assertThat(profile.nextPageUrl().isEmpty(), is(true));
+        }
+    }
+
+    @Test
     public void withoutNext() throws IOException {
         var expectedList = List.of(Package.of("StyleChecker", 23088),
                 Package.of("StyleChecker.Annotations", 6456),
