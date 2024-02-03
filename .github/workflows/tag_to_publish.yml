@@ -1,0 +1,38 @@
+name: Tag to publish
+
+on:
+  push:
+    tags:
+      - v[1].[0-9]+.[0-9]+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set up deploy keys
+      uses: maroontress/deploy-keys@v1
+      with:
+        keys: ${{ secrets.MAVEN_DEPLOY_KEY }}
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+          java-version: "17"
+          distribution: "temurin"
+    - name: Validate Gradle wrapper
+      uses: gradle/wrapper-validation-action@v2
+    - name: Build
+      run: ./gradlew build
+    - name: Publish
+      run: |
+        export TAG="${GITHUB_REF##*/}"
+        git clone --depth=1 git@github.com:maroontress/maven.git
+        ./gradlew publish
+        cd maven
+        git config --global user.email "nuget-scraper@maroontress.com"
+        git config --global user.name "GitHub Actions"
+        git add --all
+        git commit -m "Add NugetScraper $TAG"
+        git push origin main
