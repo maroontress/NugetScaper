@@ -63,9 +63,8 @@ public final class NugetScraper {
 
         /*
             <ul class="package-list">
-                <li class="package-tfm-badges">
-                    <div class="framework framework-badges">...</div>
-                </li>
+                <li class="package-warning-indicators">...</li>
+                <li class="package-tfm-badges">...</li>
                 <li>
                     <span class="icon-text">
                         <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
@@ -78,7 +77,8 @@ public final class NugetScraper {
                 .stream()
                 .filter(x -> x.hasClass("package-list"))
                 .flatMap(x -> x.getElementsByTag("li").stream())
-                .filter(x -> !x.hasClass("package-tfm-badges"))
+                .filter(x -> !x.hasClass("package-warning-indicators")
+                        && !x.hasClass("package-tfm-badges"))
                 .flatMap(x -> Arrays.stream(x.text().split(" +")))
                 .map(x -> {
                     try {
